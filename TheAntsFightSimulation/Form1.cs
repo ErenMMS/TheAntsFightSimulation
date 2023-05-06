@@ -3,6 +3,7 @@ namespace TheAntsFightSimulation
     public partial class Form1 : Form
     {
         Shikaree_Master shikaree_master = new Shikaree_Master();
+
         public Form1()
         {
             InitializeComponent();

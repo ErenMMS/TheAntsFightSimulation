@@ -4,7 +4,7 @@ Still working on
 
 Skills are triggering according to Skill Rate
 
-Damages are not calculate yet, trying to find the damage equation
+Damages are calculated but still don't gives the similar output as game
 
 
 #### Main Form of the project

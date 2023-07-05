@@ -17,13 +17,12 @@ namespace TheAntsFightSimulation
     {
         // With Level 25 and Purple Awakening //
         // 5 Star Level 20 //
-        // I don't know exactly how the preparation for 1 round of the 8th skill works, so it works like others.
 
         Skill_Damage Skill_Damage = new Skill_Damage();
         public string[] skillName = { "İnfinite Deadhunt", "Rampant Attack", "Audacious Charge" };
         public double[] skillRate = { 0.52, 0.47, 0.67};
         public double[] skillDamage = { 673.0, 353.5, 232.0 };
-        public bool[] preperation = { false, false, true };
+        public bool[] preperation = { false, false, true }; // Skill1, Skill2, Skill3
 
         public double Skill1(double attackBonus, double skillAttackBonus)
         {
@@ -56,6 +55,7 @@ namespace TheAntsFightSimulation
         public string[] skillName = { "Battle Fever", "Violently Poisonous", "Swoop" };
         public double[] skillRate = { 0.80, 0.80, 0.50 }; 
         public double[] skillDamage = { 280.0, 250.0, 180.0};
+        public bool[] preperation = { false, true, false }; // Skill1, Skill2, Skill3
 
         public double Skill1(double attackBonus, double skillAttackBonus)
         {

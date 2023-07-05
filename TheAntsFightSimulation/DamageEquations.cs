@@ -15,7 +15,7 @@ namespace TheAntsFightSimulation
 {
     ///    "squarerrot(ants)" is the square root of the number of ants in one squad(one line) ---->> give constant value for now
 
-    ///    "basic_attack_ants" is the base attack of your type of soldier ant.e.g. 105 for regular t9 shooter --->> SoldierAnts.cs classes
+    ///    "basic_attack_ants" is the base attack of your type of soldier ant.e.g. 105 for regular t9 shooter --->> SoldierAnts.cs classes //const
 
     //    "attackbonus" is the percentage bonus on attack that is displayed in combat reports as attack. if you have 200% attack bonus, the equation would be 1+2 = 3 --->> textBoxAttack
 
@@ -46,8 +46,8 @@ namespace TheAntsFightSimulation
             double damage_per_use;
             double attack_power;
 
-            attack_power = Math.Sqrt(111300) * 96 * (1 + attackBonus / 100) * (1 + skillAttackBonus / 100);
-            damage_per_use = (attack_power - 1) * (antSkillDamage / 100) * targets * (1 + 0.8);// last value is pango modifier 
+            attack_power = Math.Sqrt(53000) * 96 * (1 + attackBonus / 100) * (1 + skillAttackBonus / 100);
+            damage_per_use = (attack_power - 1) * (antSkillDamage / 100) * targets * (1 + 0.8);// last value is pango modifier %80 for carriers
 
             return damage_per_use;
         }

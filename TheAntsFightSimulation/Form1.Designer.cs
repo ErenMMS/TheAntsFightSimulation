@@ -74,11 +74,11 @@
             textBoxSAttack.Name = "textBoxSAttack";
             textBoxSAttack.Size = new Size(193, 23);
             textBoxSAttack.TabIndex = 3;
-            textBoxSAttack.Text = "92";
+            textBoxSAttack.Text = "92,6";
             // 
             // pictureBox1
             // 
-            pictureBox1.Image = Properties.Resources.SM;
+            pictureBox1.Image = Properties.Resources.GC;
             pictureBox1.Location = new Point(231, -43);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(244, 481);
@@ -109,9 +109,9 @@
             label2.AutoSize = true;
             label2.Location = new Point(19, 257);
             label2.Name = "label2";
-            label2.Size = new Size(127, 15);
+            label2.Size = new Size(183, 15);
             label2.TabIndex = 7;
-            label2.Text = "Special Ant Skill Attack";
+            label2.Text = "Special Ant Skill Attack (Ex. 12,63)";
             // 
             // Form1
             // 

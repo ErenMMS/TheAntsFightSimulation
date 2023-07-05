@@ -27,7 +27,7 @@ namespace TheAntsFightSimulation
             bool isSkill3Triggered = random3.NextDouble() <= skill3Rate;
 
             /// if there is prep and in the prep round than not trigger the skill
-            
+
             // Skill1
             if ((prepare1 == true) && (round % 2 == 1))
             {
@@ -64,7 +64,7 @@ namespace TheAntsFightSimulation
             else if (isSkill3Triggered == true)
             {
                 triggeredSkills[2] = true;
-            } 
+            }
             else
             {
                 triggeredSkills[2] = false;
@@ -145,7 +145,7 @@ namespace TheAntsFightSimulation
             listBox1.Items.Add(skillN2);
             listBox1.Items.Add(skillN3);
             listBox1.Items.Add(SumSkill);
-            listBox1.Items.Add(Math.Floor(allSkillDmg/1000000) + "m");
+            listBox1.Items.Add(Math.Floor(allSkillDmg / 1000000) + "m");
         }
     }
 }

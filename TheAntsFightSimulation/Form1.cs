@@ -123,7 +123,7 @@ namespace TheAntsFightSimulation
                     {
                         skill1Dmg += shikaree_master.Skill1(attackBonus, skillAttackBonus);
                     }
-                    else if(selectedAnt == "Jack Jumper")
+                    else if (selectedAnt == "Jack Jumper")
                     {
                         skill1Dmg += jack_jumper.Skill1(attackBonus, skillAttackBonus);
                     }

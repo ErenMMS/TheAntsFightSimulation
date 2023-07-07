@@ -123,7 +123,7 @@
             AntsSelectorBox.Name = "AntsSelectorBox";
             AntsSelectorBox.Size = new Size(193, 23);
             AntsSelectorBox.TabIndex = 8;
-            AntsSelectorBox.Text = "Choose Ant";
+            AntsSelectorBox.Text = "Choose Ant !";
             // 
             // label3
             // 

@@ -20,8 +20,8 @@ namespace TheAntsFightSimulation
 
         Skill_Damage Skill_Damage = new Skill_Damage();
         public string[] skillName = { "İnfinite Deadhunt", "Rampant Attack", "Audacious Charge" };
-        public double[] skillRate = { 1.0, 1.0, 1.0 }; // full rate for max skill dmg testing
-        //public double[] skillRate = { 0.52, 0.47, 0.67}; // normal rate
+        //public double[] skillRate = { 1.0, 1.0, 1.0 }; // full rate for max skill dmg testing
+        public double[] skillRate = { 0.52, 0.47, 0.67}; // normal rate
         public double[] skillDamage = { 673.0, 353.5, 232.0 };
         public bool[] preperation = { false, false, true }; // Skill1, Skill2, Skill3
 
@@ -89,8 +89,8 @@ namespace TheAntsFightSimulation
 
         Skill_Damage Skill_Damage = new Skill_Damage();
         public string[] skillName = { "Rampant Attack", "Jumping Attack", "Blitzkrieg" };
-        public double[] skillRate = { 1.0, 1.0, 1.0 }; // full rate for max skill dmg testing
-        //public double[] skillRate = { 0.40, 0.80, 0.50 }; // normal rate
+        //public double[] skillRate = { 1.0, 1.0, 1.0 }; // full rate for max skill dmg testing
+        public double[] skillRate = { 0.40, 0.80, 0.50 }; // normal rate
         public double[] skillDamage = { 249.0, 130.0, 667.0 };
         public bool[] preperation = { false, false, true }; // Skill1, Skill2, Skill3
 

@@ -9,7 +9,7 @@ Damages are calculated but still don't gives the similar output as game
 
 #### Main Form of the project
 
-![image](https://github.com/ErenMMS/TheAntsFightSimulation/assets/61689837/52dc8d5b-a44d-4696-bfb1-d4028c773ace)
+![image](https://github.com/ErenMMS/TheAntsFightSimulation/assets/61689837/2aa93049-f10e-4078-b4bd-70e61d4e5988)
 
+![image](https://github.com/ErenMMS/TheAntsFightSimulation/assets/61689837/d2926bef-a136-4bd2-ac51-2cb31ef8ccb1)
 
-![image](https://github.com/ErenMMS/TheAntsFightSimulation/assets/61689837/765730c8-5b27-4ec1-82df-3944b7a0cb77)

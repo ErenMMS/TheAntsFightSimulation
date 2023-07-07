@@ -4,10 +4,14 @@ namespace TheAntsFightSimulation
     {
         Shikaree_Master shikaree_master = new Shikaree_Master();
         Golden_Crystal golden_crystal = new Golden_Crystal();
+        Jack_Jumper jack_jumper = new Jack_Jumper();
 
         double attackBonus;
         double skillAttackBonus;
 
+        string[] skillName;
+        double[] skillRate;
+        bool[] preperation;
 
         public Form1()
         {
@@ -75,29 +79,27 @@ namespace TheAntsFightSimulation
 
         private void btnAttack_Click(object sender, EventArgs e)
         {
-            // Future Plan for multiple ant // 
-
-            // input AntName => a function and that function go to the ant class and call attack functions
-
-            //string inputAnt;
-            //string[] skillName = intputAnt.skillName;
-            //double[] skillRate = inputAnt.skillRate;
-            //double[] skillDamage = inputAnt.skillDamage;
-
-            // // // // // // // // // // // /
-
+            string selectedAnt = AntsSelectorBox.Text;
             attackBonus = Convert.ToDouble(textBoxAttack.Text);
             skillAttackBonus = Convert.ToDouble(textBoxSAttack.Text);
 
             listBox1.Items.Clear();
 
-            string[] skillName = shikaree_master.skillName;
-            double[] skillRate = shikaree_master.skillRate;
-            bool[] preperation = shikaree_master.preperation;
-
-            double skill1Rate = skillRate[0];
-            double skill2Rate = skillRate[1];
-            double skill3Rate = skillRate[2];
+            // when added lot of ant use switch case or a different design
+            if (selectedAnt == "Shikaree Master")
+            {
+                skillName = shikaree_master.skillName;
+                skillRate = shikaree_master.skillRate;
+                preperation = shikaree_master.preperation;
+                listBox1.Items.Add("Shikaree Master");
+            }
+            else if (selectedAnt == "Jack Jumper")
+            {
+                skillName = jack_jumper.skillName;
+                skillRate = jack_jumper.skillRate;
+                preperation = jack_jumper.preperation;
+                listBox1.Items.Add("Jack Jumper");
+            }
 
             string skillN1 = skillName[0] + "x0";
             string skillN2 = skillName[1] + "x0";
@@ -113,26 +115,47 @@ namespace TheAntsFightSimulation
 
             for (int i = 0; i < 8; i++) // 8 round
             {
-                bool[] triggeredSkills = IsSkillTriggered(skill1Rate, preperation[0], skill2Rate, preperation[1], skill3Rate, preperation[2], i);
+                bool[] triggeredSkills = IsSkillTriggered(skillRate[0], preperation[0], skillRate[1], preperation[1], skillRate[2], preperation[2], i);
 
                 if (triggeredSkills[0] == true)
                 {
-                    skill1Dmg += shikaree_master.Skill1(attackBonus, skillAttackBonus);
+                    if (selectedAnt == "Shikaree Master")
+                    {
+                        skill1Dmg += shikaree_master.Skill1(attackBonus, skillAttackBonus);
+                    }
+                    else if(selectedAnt == "Jack Jumper")
+                    {
+                        skill1Dmg += jack_jumper.Skill1(attackBonus, skillAttackBonus);
+                    }
 
                     counterForSkill1++;
-                    skillN1 = skillName[0] + " x" + counterForSkill1; //skillN1 = skillName[0] + " x" + ++counterForSkill1;
+                    skillN1 = skillName[0] + " x" + counterForSkill1;
 
                 }
                 if (triggeredSkills[1] == true)
                 {
-                    skill2Dmg += shikaree_master.Skill2(attackBonus, skillAttackBonus);
+                    if (selectedAnt == "Shikaree Master")
+                    {
+                        skill2Dmg += shikaree_master.Skill2(attackBonus, skillAttackBonus);
+                    }
+                    else if (selectedAnt == "Jack Jumper")
+                    {
+                        skill2Dmg += jack_jumper.Skill2(attackBonus, skillAttackBonus);
+                    }
 
                     counterForSkill2++;
                     skillN2 = skillName[1] + " x" + counterForSkill2;
                 }
                 if (triggeredSkills[2] == true)
                 {
-                    skill3Dmg += shikaree_master.Skill3(attackBonus, skillAttackBonus);
+                    if (selectedAnt == "Shikaree Master")
+                    {
+                        skill3Dmg += shikaree_master.Skill3(attackBonus, skillAttackBonus);
+                    }
+                    else if (selectedAnt == "Jack Jumper")
+                    {
+                        skill3Dmg += jack_jumper.Skill3(attackBonus, skillAttackBonus);
+                    }
 
                     counterForSkill3++;
                     skillN3 = skillName[2] + " x" + counterForSkill3;

@@ -20,7 +20,8 @@ namespace TheAntsFightSimulation
 
         Skill_Damage Skill_Damage = new Skill_Damage();
         public string[] skillName = { "İnfinite Deadhunt", "Rampant Attack", "Audacious Charge" };
-        public double[] skillRate = { 0.52, 0.47, 0.67};
+        public double[] skillRate = { 1.0, 1.0, 1.0 }; // full rate for max skill dmg testing
+        //public double[] skillRate = { 0.52, 0.47, 0.67}; // normal rate
         public double[] skillDamage = { 673.0, 353.5, 232.0 };
         public bool[] preperation = { false, false, true }; // Skill1, Skill2, Skill3
 
@@ -53,7 +54,8 @@ namespace TheAntsFightSimulation
 
         Skill_Damage Skill_Damage = new Skill_Damage();
         public string[] skillName = { "Battle Fever", "Violently Poisonous", "Swoop" };
-        public double[] skillRate = { 0.80, 0.80, 0.50 }; 
+        //public double[] skillRate = { 1.0, 1.0, 1.0 }; // full rate for max skill dmg testing
+        public double[] skillRate = { 0.80, 0.80, 0.50 }; // normal rate
         public double[] skillDamage = { 280.0, 250.0, 180.0};
         public bool[] preperation = { false, true, false }; // Skill1, Skill2, Skill3
 
@@ -79,6 +81,42 @@ namespace TheAntsFightSimulation
             return dmg;
         }
     }
+
+    public class Jack_Jumper : Universal_Class
+    {
+        // With Level 1 and Green Awakening //
+        // 0 Star Level 10 //
+
+        Skill_Damage Skill_Damage = new Skill_Damage();
+        public string[] skillName = { "Rampant Attack", "Jumping Attack", "Blitzkrieg" };
+        public double[] skillRate = { 1.0, 1.0, 1.0 }; // full rate for max skill dmg testing
+        //public double[] skillRate = { 0.40, 0.80, 0.50 }; // normal rate
+        public double[] skillDamage = { 249.0, 130.0, 667.0 };
+        public bool[] preperation = { false, false, true }; // Skill1, Skill2, Skill3
+
+        public double Skill1(double attackBonus, double skillAttackBonus)
+        {
+            double dmg;
+
+            dmg = Skill_Damage.DamagePerUse(attackBonus, skillAttackBonus, skillDamage[0], 2);
+            return dmg;
+        }
+        public double Skill2(double attackBonus, double skillAttackBonus)
+        {
+            double dmg;
+
+            dmg = Skill_Damage.DamagePerUse(attackBonus, skillAttackBonus, skillDamage[1], 2);
+            return dmg;
+        }
+        public double Skill3(double attackBonus, double skillAttackBonus)
+        {
+            double dmg;
+
+            dmg = Skill_Damage.DamagePerUse(attackBonus, skillAttackBonus, skillDamage[2], 1);
+            return dmg;
+        }
+    }
+
     public class Gianth_Tooth : Universal_Class
     {
         // With Level 20 and Blue Awakening //

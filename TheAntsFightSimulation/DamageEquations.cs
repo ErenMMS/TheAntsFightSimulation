@@ -46,7 +46,7 @@ namespace TheAntsFightSimulation
             double damage_per_use;
             double attack_power;
 
-            attack_power = Math.Sqrt(53000) * 96 * (1 + attackBonus / 100) * (1 + skillAttackBonus / 100);
+            attack_power = Math.Sqrt(111300) * 96 * (1 + attackBonus / 100) * (1 + skillAttackBonus / 100);
             damage_per_use = (attack_power - 1) * (antSkillDamage / 100) * targets * (1 + 0.8);// last value is pango modifier %80 for carriers
 
             return damage_per_use;
